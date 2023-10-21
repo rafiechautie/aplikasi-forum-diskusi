@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Open+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-white-color: #F1EFEF;
+    --bg-dark-color: #191717;
+    --second-color: #CCC8AA;
+    --third-color: #7D7C7C;
+    --border: 1px solid var(--second-color);
+    --hover-color: #2b72fb;
+    --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+}
+
+body{
+    font-family: inherit;
+    background-color: var(--bg-white-color);
+    color: var(--bg-dark-color);
+}
+
+/* navbar */
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: inherit;
+}
+
+.nav-start .logo{
+    font-family: 'Croissant One', cursive;
+    font-size: 1.8em;
+}
+
+header{
+    border-bottom: var(--border);
+}
+
+.container-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+    height: 90px;
+    padding: 1.2rem 3rem;
+}
+
+.avatar{
+    width: 30px;
+}
+
+.menu{
+    position: relative;
+    background-color: var(--bg-white-color);
+}
+
+.menu-bar li .dropdown{
+    flex-direction: initial;
+    min-width: 480px;
+    /* background-color: blue; */
+}
+
+.menu-bar .nav-link{
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    padding: 0.3rem;
+    min-width: 60px;
+    margin: 0 0.6rem;
+}
+
+.menu-bar .nav-link:hover,
+.dropdown-link:hover{
+    color: var(--hover-color);
+}
+
+.nav-start,
+.nav-end,
+.menu-bar{
+    display: flex;
+    align-items: center;
+}
+
+.dropdown{
+    display: flex;
+    flex-direction: column;
+    min-width: 230px;
+    background-color: var(--bg-white-color);
+    border-radius: 10px;
+    position: absolute;
+    top: 36px;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.97) translateX(-5px);
+    transition: 0.1s ease-in-out;
+    box-shadow: var(--shadow);;    
+}
+
+.dropdown.active{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) translateX(5px);
+}
+
+.dropdown ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.15rem;
+}
+
+.dropdown-link {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-radius: 7px;
+    transition: 0.1s ease-in-out;
+}
+.profile{
+    display: flex;
+    flex-direction: row-reverse;
+}
+/* penutup navbar  */
+
+.test{
+    padding-top: 100px;
+}
+
